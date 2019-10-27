@@ -1,7 +1,7 @@
 require "ruby_tdd/version"
 require 'colorize'
-require '../lib/test_watch'
-require '../lib/stub'
+require_relative './test_watch'
+require_relative './stub'
 
 module RubyTdd
   def assert(message = '', expression = false)
