@@ -14,8 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.homepage = 'https://github.com/Augustalex/ruby_tdd'
 
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/Augustalex/ruby_tdd"
 
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = 'https://rubygems.org'
