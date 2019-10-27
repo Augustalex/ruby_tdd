@@ -3,28 +3,18 @@ require 'colorize'
 require_relative './test_watch'
 require_relative './stub'
 
-class RubyTdd
-  def self.assert(message = '', expression = false)
-    unless expression
-      puts "Assertion error: " + message
-    end
+def test_case(description, block)
+  if block.call
+    test_passed_message 'Passed: "' + description + '"'
+  else
+    test_failed_message 'Failed test: "' + description + '"'
   end
+end
 
-  def self.test(description, block)
-    if block.call
-      passed 'Passed: "' + description + '"'
-    else
-      failed 'Failed test: "' + description + '"'
-    end
-  end
+def test_passed_message(text)
+  puts text.green
+end
 
-  private
-
-  def self.passed(text)
-    puts text.green
-  end
-
-  def self.failed(text)
-    puts text.red
-  end
+def test_failed_message(text)
+  puts text.red
 end
