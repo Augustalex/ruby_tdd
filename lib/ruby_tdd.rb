@@ -11,7 +11,7 @@ def test_case(description, block)
       test_failed_message 'Failed test: "' + description + '"'
     end
   rescue => error
-    test_failed_message 'Failed test because an error was raised: ' + error
+    test_failed_message 'Failed test because an error was raised: ' + error.to_s
   end
 end
 
