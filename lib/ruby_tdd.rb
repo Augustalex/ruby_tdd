@@ -4,6 +4,8 @@ require_relative './test_watch'
 require_relative './stub'
 
 module RubyTdd
+  public
+
   def assert(message = '', expression = false)
     unless expression
       puts "Assertion error: " + message
@@ -17,6 +19,8 @@ module RubyTdd
       failed 'Failed test: "' + description + '"'
     end
   end
+
+  private
 
   def passed(text)
     puts text.green
